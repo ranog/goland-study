@@ -17,9 +17,7 @@ type user struct {
 
 func main() {
 	mux := http.NewServeMux()
-	log.Println("Server started on :8080")
 	mux.HandleFunc("/users", listUsersHandler)
-	log.Println("Server started on :8080")
 	http.ListenAndServe(":8080", mux)
 }
 
