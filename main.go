@@ -20,7 +20,7 @@ func main() {
 	log.Println("Server started on :8080")
 	mux.HandleFunc("/users", listUsersHandler)
 	log.Println("Server started on :8080")
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", mux)
 }
 
 func listUsersHandler(w http.ResponseWriter, r *http.Request) {
